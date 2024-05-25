@@ -1,5 +1,5 @@
 .idea
-sites-serice/target
 sites-service/target
 *.iml
 calendar-service/target
+planning-service/target

@@ -25,7 +25,7 @@ public class CalendrierSportController {
     }
 
     @PutMapping("/{id}")
-    public CalendrierSport updateCalendrierSport(@PathVariable Long id, @RequestBody CalendrierSport calendrierSport) {
+    public CalendrierSport updateCalendrierSport(@PathVariable String id, @RequestBody CalendrierSport calendrierSport) {
         return calendrierSportService.updateCalendrierSport(id, calendrierSport);
     }
 

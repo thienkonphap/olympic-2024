@@ -1,9 +1,11 @@
 package dauphine.miageif.site.model;
 
 
+import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-@Document
+@Document("activite")
+@Data
 public class Activite {
 
     @Id

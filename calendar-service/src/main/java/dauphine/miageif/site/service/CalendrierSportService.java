@@ -21,7 +21,7 @@ public class CalendrierSportService {
         return calendrierSportRepository.findAll();
     }
 
-    public CalendrierSport updateCalendrierSport(Long id, CalendrierSport calendrierSport) {
+    public CalendrierSport updateCalendrierSport(String id, CalendrierSport calendrierSport) {
         calendrierSport.setId(id);
         return calendrierSportRepository.save(calendrierSport);
     }

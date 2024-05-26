@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>dauphine.miageif.site</groupId>
-	<artifactId>Sites-Service</artifactId>
+	<artifactId>siteservice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>MSA</name>
 	<description>MIAGE IF Microservice</description>

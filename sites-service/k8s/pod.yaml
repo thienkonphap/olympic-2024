@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: spring-app
+  labels:
+    app: spring-app
+spec:
+  containers:
+    - name: spring-app-container
+      image: sites-service-container:latest
+      imagePullPolicy: IfNotPresent
+      ports:
+        - containerPort: 8080

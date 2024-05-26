@@ -22,7 +22,7 @@ public class Sport {
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(columnDefinition = "varchar[]")
+    @Column(columnDefinition = "Text array")
     private String[] type;
 
     @ManyToMany(mappedBy = "sports")

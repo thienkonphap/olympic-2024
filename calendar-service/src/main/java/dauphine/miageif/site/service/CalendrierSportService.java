@@ -5,7 +5,9 @@ import dauphine.miageif.site.repository.CalendrierSportRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CalendrierSportService {
@@ -26,7 +28,13 @@ public class CalendrierSportService {
         return calendrierSportRepository.save(calendrierSport);
     }
 
-    public void deleteCalendrierSport(Long id) {
+    public void deleteCalendrierSport(String id) {
         calendrierSportRepository.deleteById(id);
+    }
+    public List<CalendrierSport> getCalendrierSportsByDate(String date) {
+        return calendrierSportRepository.findByDate(date);
+    }
+    public Optional<CalendrierSport> getCalendrierSportById(String id) {
+        return calendrierSportRepository.findById(id);
     }
 }

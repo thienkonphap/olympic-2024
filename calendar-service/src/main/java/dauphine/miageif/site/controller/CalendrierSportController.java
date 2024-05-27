@@ -4,7 +4,7 @@ import dauphine.miageif.site.model.CalendrierSport;
 import dauphine.miageif.site.service.CalendrierSportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
+import java.util.Optional;
 import java.util.List;
 
 @RestController
@@ -30,7 +30,16 @@ public class CalendrierSportController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteCalendrierSport(@PathVariable Long id) {
+    public void deleteCalendrierSport(@PathVariable String id) {
         calendrierSportService.deleteCalendrierSport(id);
+    }
+    @GetMapping("/filter")
+    public List<CalendrierSport> getCalendrierSportsByDate(@RequestParam String date) {
+        return calendrierSportService.getCalendrierSportsByDate(date);
+    }
+
+    @GetMapping("/{id}")
+    public Optional<CalendrierSport> getCalendrierSportById(@PathVariable String id) {
+        return calendrierSportService.getCalendrierSportById(id);
     }
 }

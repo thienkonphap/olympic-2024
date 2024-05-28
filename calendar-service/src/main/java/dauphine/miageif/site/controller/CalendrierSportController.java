@@ -38,6 +38,12 @@ public class CalendrierSportController {
         return calendrierSportService.getCalendrierSportsByDate(date);
     }
 
+    @GetMapping("/filterSite")
+    public List<CalendrierSport> getCalendrierSportsBySite(@RequestBody String site) {
+        System.out.println(site);
+        return calendrierSportService.getCalendrierSportsBySite(site);
+    }
+
     @GetMapping("/{id}")
     public Optional<CalendrierSport> getCalendrierSportById(@PathVariable String id) {
         return calendrierSportService.getCalendrierSportById(id);

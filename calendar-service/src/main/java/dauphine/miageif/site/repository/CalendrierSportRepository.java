@@ -13,4 +13,6 @@ public interface CalendrierSportRepository extends MongoRepository<CalendrierSpo
     List<CalendrierSport> findByDate(String date);
 
     Optional<CalendrierSport> findById(String id);
+
+    List<CalendrierSport> findBySite(String site);
 }

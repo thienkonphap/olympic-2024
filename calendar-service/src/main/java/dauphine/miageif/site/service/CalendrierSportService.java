@@ -37,4 +37,8 @@ public class CalendrierSportService {
     public Optional<CalendrierSport> getCalendrierSportById(String id) {
         return calendrierSportRepository.findById(id);
     }
+
+    public List<CalendrierSport> getCalendrierSportsBySite(String site) {
+        return calendrierSportRepository.findBySite(site);
+    }
 }

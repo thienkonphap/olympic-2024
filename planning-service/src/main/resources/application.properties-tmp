@@ -1,0 +1,3 @@
+spring.data.mongodb.uri=mongodb+srv://samiouad04:m95WAR825xo1JSnE@planningcluster.8vvgfzb.mongodb.net/?retryWrites=true&w=majority&appName=planningCluster
+
+spring.data.mongodb.database=Planning

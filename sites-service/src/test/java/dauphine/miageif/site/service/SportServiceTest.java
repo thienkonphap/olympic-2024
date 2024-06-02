@@ -15,7 +15,7 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-public class SportServiceTest {
+class SportServiceTest {
 
     @Mock
     private SportRepository sportRepository;
@@ -24,12 +24,12 @@ public class SportServiceTest {
     private SportService sportService;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
         MockitoAnnotations.openMocks(this);
     }
 
     @Test
-    public void testGetAllSports() {
+    void testGetAllSports() {
         Sport sport1 = new Sport(1L, "Basketball", new String[]{"olympic"}, null);
         Sport sport2 = new Sport(2L, "Swimming", new String[]{"olympic"}, null);
 
@@ -42,7 +42,7 @@ public class SportServiceTest {
     }
 
     @Test
-    public void testSaveSport() {
+    void testSaveSport() {
         Sport sport = new Sport(1L, "Basketball", new String[]{"olympic"}, null);
 
         when(sportRepository.save(sport)).thenReturn(sport);
@@ -52,7 +52,7 @@ public class SportServiceTest {
     }
 
     @Test
-    public void testDeleteSport() {
+    void testDeleteSport() {
         Sport sport = new Sport(1L, "Basketball", new String[]{"olympic"}, null);
 
         when(sportRepository.findById(1L)).thenReturn(Optional.of(sport));
@@ -63,7 +63,7 @@ public class SportServiceTest {
     }
 
     @Test
-    public void testUpdateSport() {
+    void testUpdateSport() {
         Sport existingSport = new Sport(1L, "Basketball", new String[]{"olympic"}, null);
         Sport updatedDetails = new Sport(1L, "Basketball Updated", new String[]{"olympic"}, null);
 

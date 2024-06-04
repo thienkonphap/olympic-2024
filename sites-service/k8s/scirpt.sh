@@ -7,7 +7,12 @@ check_kubectl() {
         exit 1
     fi
 }
-
+# Function to build Docker image
+build_docker_image() {
+    echo "Building Docker image..."
+    eval $(minikube -p minikube docker-env)
+    docker build -t sites-service-container:latest .
+}
 # Function to check if minikube is running
 check_minikube() {
     if ! minikube status | grep -q 'host: Running'; then
@@ -36,6 +41,7 @@ check_status() {
 main() {
     check_kubectl
     check_minikube
+    build_docker_image
     apply_k8s_configs
     check_status
     echo "Deployment to Minikube completed successfully."

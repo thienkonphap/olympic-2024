@@ -1,27 +1,5 @@
-Lancer les services : 
 
-
-Assurez-vous d'avoir Docker et Docker Compose installés sur votre machine.
-
-Étapes pour lancer les services : 
-1. Cloner le dépôt
-
-Copier et coller le code sur votre terminal :
-git clone https://github.com/thienkonphap/olympic-2024.git
-
-cd olympic-2024
-
-2. Construire les images Docker
-
-Copier et coller le code : 
-docker-compose build
-
-3. Démarrer les services
-
-Copier le code : 
-docker-compose up
-
-4. Accéder aux services sur votre naviguateur ou Postman
+# Accéder aux services sur votre naviguateur ou Postman
 
 Service Calendar : http://localhost:8080
 
@@ -35,7 +13,21 @@ Documentation Swagger pour Planning : http://localhost:8081/swagger-ui/index.htm
 
 Documentation Swagger pour Site : http://localhost:8082/swagger-ui/index.html
 
-5. Arrêter les services
-Pour arrêter les services, utilisez la commande :
+# Example comment deployer et executer un service
 
-docker-compose down
+## Requis
+
+- Docker
+- Minikube
+
+1. Accéder [site-service/src/k8s](https://github.com/thienkonphap/olympic-2024/tree/main/sites-service/k8s)
+2. Executer le script
+
+```sh
+./script.sh
+```
+3. Accéder au document de service avec l'adresse: https://127.0.0.1:54650
+
+   ![Screenshot 2024-06-04 at 21 52 26](https://github.com/thienkonphap/olympic-2024/assets/79655393/9a91623f-ec20-4d61-9485-42df4877d651)
+
+

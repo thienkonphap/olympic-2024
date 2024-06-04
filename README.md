@@ -26,7 +26,7 @@ Documentation Swagger pour Site : http://localhost:8082/swagger-ui/index.html
 ```sh
 ./script.sh
 ```
-3. Accéder au document de service avec l'adresse: https://127.0.0.1:54650
+3. Accéder au document de service avec l'adresse: http://127.0.0.1:54650/swagger-ui/index.html
 
    ![Screenshot 2024-06-04 at 21 52 26](https://github.com/thienkonphap/olympic-2024/assets/79655393/9a91623f-ec20-4d61-9485-42df4877d651)
 

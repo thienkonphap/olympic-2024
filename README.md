@@ -20,7 +20,7 @@ Documentation Swagger pour Site : http://localhost:8082/swagger-ui/index.html
 - Docker
 - Minikube
 
-1. Accéder src/k8s
+1. Accéder [site-service/src/k8s](https://github.com/thienkonphap/olympic-2024/tree/main/sites-service/k8s)
 2. Executer le script
 
 ```sh

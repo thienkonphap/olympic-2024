@@ -2,21 +2,21 @@ server:
   port: 8082
 
 spring:
-  application:
-    name: api-gateway
+  main:
+    web-application-type: reactive
 
-cloud:
-  gateway:
-    routes:
-      - id: planning-service
-        uri: http://localhost:8081
-        predicates:
-          - Path=/planning/**
-      - id: calendar-service
-        uri: http://localhost:8080
-        predicates:
-          - Path=/calendar/**
-      - id: sites-service
-        uri: http://localhost:8083
-        predicates:
-          - Path=/sites/**
+  cloud:
+    gateway:
+      routes:
+        - id: planning-service
+          uri: http://localhost:8081
+          predicates:
+            - Path=/planning/**
+        - id: calendar-service
+          uri: http://localhost:8080
+          predicates:
+            - Path=/calendrier-sports/**
+        - id: sites-service
+          uri: http://localhost:8083
+          predicates:
+            - Path=/api/sites/**

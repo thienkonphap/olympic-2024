@@ -45,4 +45,7 @@ public class PlanningService {
     public List<Planning> getPlanningsByType(String type) {
         return planningRepository.findByType(type);
     }
+    public List<Planning> getPlanningsBySport(String sport) {
+        return planningRepository.findByActivitesSport(sport);
+    }
 }

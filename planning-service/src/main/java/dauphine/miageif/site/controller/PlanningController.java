@@ -84,6 +84,11 @@ public class PlanningController {
         List<Planning> plannings = planningService.getPlanningsByType(type);
         return ResponseEntity.ok(plannings);
     }
+    @GetMapping("/filterSport")
+    public ResponseEntity<List<Planning>> getPlanningsBySport(@RequestParam String sport) {
+        List<Planning> plannings = planningService.getPlanningsBySport(sport);
+        return ResponseEntity.ok(plannings);
+    }
 
 
 }

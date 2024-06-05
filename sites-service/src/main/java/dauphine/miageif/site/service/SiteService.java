@@ -67,4 +67,7 @@ public class SiteService {
         }
         return null;
     }
+    public List<Site> filterBySport(String sportName) {
+        return siteRepository.findBySportName(sportName);
+    }
 }

@@ -53,4 +53,8 @@ public class SiteController {
         Site site = siteService.removeSportFromSite(siteId, sportId);
         return site != null ? ResponseEntity.ok(site) : ResponseEntity.notFound().build();
     }
+    @GetMapping("/sports")
+    public List<Site>filterBySport(@RequestBody String sportName) {
+        return siteService.filterBySport(sportName);
+    }
 }

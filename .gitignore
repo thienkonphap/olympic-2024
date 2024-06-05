@@ -3,5 +3,5 @@ sites-service/target
 *.iml
 calendar-service/target
 planning-service/target
-target/target
+gateway/target
 .DS_Store

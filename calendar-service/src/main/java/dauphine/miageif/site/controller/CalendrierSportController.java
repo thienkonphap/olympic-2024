@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/calendrier-sports")
+@CrossOrigin(origins = "http://localhost:3000")
 public class CalendrierSportController {
 
     @Autowired

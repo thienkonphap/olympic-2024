@@ -37,4 +37,8 @@ public class PlanningService {
     public void save(Planning planning) {
         planningRepository.save(planning);
     }
+
+    public Optional<Planning> getPlanningById(String id) {
+        return planningRepository.findById(id);
+    }
 }

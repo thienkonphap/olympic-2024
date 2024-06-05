@@ -33,6 +33,12 @@ public class PlanningController {
         return planningService.getAllPlannings();
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Planning> getPlanningById(@PathVariable String id) {
+        Optional<Planning> planning = planningService.getPlanningById(id);
+        return planning.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
     @PutMapping("/{id}")
     public Planning updateplanning(@PathVariable String id, @RequestBody Planning planning) {
         return planningService.updatePlanning(id, planning);

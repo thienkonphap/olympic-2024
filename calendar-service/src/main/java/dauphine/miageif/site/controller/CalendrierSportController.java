@@ -3,13 +3,13 @@ package dauphine.miageif.site.controller;
 import dauphine.miageif.site.model.CalendrierSport;
 import dauphine.miageif.site.service.CalendrierSportService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 import java.util.List;
 
 @RestController
 @RequestMapping("/calendrier-sports")
-@CrossOrigin(origins = "http://localhost:3000")
 public class CalendrierSportController {
 
     @Autowired
@@ -49,4 +49,5 @@ public class CalendrierSportController {
     public Optional<CalendrierSport> getCalendrierSportById(@PathVariable String id) {
         return calendrierSportService.getCalendrierSportById(id);
     }
+
 }

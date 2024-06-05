@@ -13,4 +13,6 @@ public interface PlanningRepository extends MongoRepository<Planning, Long> {
     void deleteById(String id);
 
     Optional<Planning> findById(String id);
+
+    List<Planning> findByType(String type);
 }

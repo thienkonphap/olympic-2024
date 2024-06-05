@@ -41,4 +41,8 @@ public class PlanningService {
     public Optional<Planning> getPlanningById(String id) {
         return planningRepository.findById(id);
     }
+
+    public List<Planning> getPlanningsByType(String type) {
+        return planningRepository.findByType(type);
+    }
 }

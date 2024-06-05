@@ -49,16 +49,6 @@ public class PlanningController {
         planningService.deletePlanning(id);
     }
 
-    //    @PostMapping("{planningID}/addActivity/{activityID}")
-//    public void addActivity(@PathVariable String planningID, @PathVariable String activityID ){
-//        // Apeller
-//        String url = "localhost://8080/getbyid/" + activityID;
-//        Activite activityFound = restTemplate.getForObject(url, Activite.class);
-//
-//        Optional<Planning> foundPlanning = planningService.findById(planningID);
-//        foundPlanning.ifPresentOrElse(f -> {
-//            f.getActivites().add(1,activityFound);
-//        });
     @PostMapping("{planningID}/addActivity/{activityID}")
     public ResponseEntity<?> addActivity(@PathVariable String planningID, @PathVariable String activityID) {
 
@@ -89,5 +79,12 @@ public class PlanningController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An error occurred: " + e.getMessage());
         }
     }
+    @GetMapping("/filter")
+    public ResponseEntity<List<Planning>> getPlanningsByType(@RequestParam String type) {
+        List<Planning> plannings = planningService.getPlanningsByType(type);
+        return ResponseEntity.ok(plannings);
+    }
+
+
 }
 

@@ -1,7 +1,6 @@
 package dauphine.miageif.site.controller;
 
 import dauphine.miageif.site.entity.Site;
-import dauphine.miageif.site.entity.Sport;
 import dauphine.miageif.site.service.SiteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -12,6 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/sites")
+@CrossOrigin(origins = "http://localhost:3000")
 public class SiteController {
     @Autowired
     private SiteService siteService;

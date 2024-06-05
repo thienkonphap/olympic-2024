@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.Arrays;
 
-public class SportTest {
+class SportTest {
 
     @Test
-    public void testGettersAndSetters() {
+    void testGettersAndSetters() {
         // Create Site objects
         Site site1 = new Site();
         site1.setSiteId(1L);
@@ -40,14 +40,14 @@ public class SportTest {
     }
 
     @Test
-    public void testNoArgsConstructor() {
+    void testNoArgsConstructor() {
         // Test no-args constructor
         Sport sport = new Sport();
         assertNotNull(sport);
     }
 
     @Test
-    public void testAllArgsConstructor() {
+    void testAllArgsConstructor() {
         // Create Site objects
         Site site1 = new Site(1L, "Stade de France", "Paris", 2.3601, 48.9244, null);
         Site site2 = new Site(2L, "Aquatics Center", "Paris", 2.3414, 48.8357, null);

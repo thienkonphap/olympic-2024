@@ -17,7 +17,7 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-public class SiteServiceTest {
+class SiteServiceTest {
 
     @Mock
     private SiteRepository siteRepository;
@@ -34,7 +34,7 @@ public class SiteServiceTest {
     }
 
     @Test
-    public void testGetAllSites() {
+    void testGetAllSites() {
         Site site1 = new Site(1L, "Stade de France", "Paris", 2.3601, 48.9244, null);
         Site site2 = new Site(2L, "Aquatics Center", "Paris", 2.3414, 48.8357, null);
 
@@ -47,7 +47,7 @@ public class SiteServiceTest {
     }
 
     @Test
-    public void testGetSiteById() {
+    void testGetSiteById() {
         Site site = new Site(1L, "Stade de France", "Paris", 2.3601, 48.9244, null);
 
         when(siteRepository.findById(1L)).thenReturn(Optional.of(site));
@@ -58,7 +58,7 @@ public class SiteServiceTest {
     }
 
     @Test
-    public void testUpdateSite() {
+    void testUpdateSite() {
         Site site = new Site(1L, "Stade de France", "Paris", 2.3601, 48.9244, null);
         Site updatedDetails = new Site(null, "Stade de France Updated", "Paris Updated", 0, 0, null);
 
@@ -72,7 +72,7 @@ public class SiteServiceTest {
     }
 
     @Test
-    public void testDeleteSite() {
+    void testDeleteSite() {
         Site site = new Site(1L, "Stade de France", "Paris", 2.3601, 48.9244, null);
 
         when(siteRepository.findById(1L)).thenReturn(Optional.of(site));
@@ -83,7 +83,7 @@ public class SiteServiceTest {
     }
 
     @Test
-    public void testSaveSite() {
+    void testSaveSite() {
         Site site = new Site(1L, "Stade de France", "Paris", 2.3601, 48.9244, null);
 
         when(siteRepository.save(site)).thenReturn(site);
@@ -93,7 +93,7 @@ public class SiteServiceTest {
     }
 
     @Test
-    public void testGetSitesByName() {
+    void testGetSitesByName() {
         Site site = new Site(1L, "Stade de France", "Paris", 2.3601, 48.9244, null);
 
         when(siteRepository.findByName("Stade de France")).thenReturn(Arrays.asList(site));
@@ -104,7 +104,7 @@ public class SiteServiceTest {
     }
 
     @Test
-    public void testGetSportsBySiteId() {
+    void testGetSportsBySiteId() {
         Sport sport = new Sport(1L, "Basketball", new String[]{"olympic"}, null);
         Site site = new Site(1L, "Stade de France", "Paris", 2.3601, 48.9244, Arrays.asList(sport));
 

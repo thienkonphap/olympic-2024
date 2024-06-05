@@ -19,7 +19,6 @@ public class SportController {
     }
     @PostMapping
     public Sport createSport(@RequestBody Sport sport) {
-        System.out.println(sport.getName());
         return sportService.save(sport);
     }
     @PutMapping("/{id}")

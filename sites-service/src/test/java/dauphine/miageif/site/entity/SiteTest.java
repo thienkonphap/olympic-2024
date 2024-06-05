@@ -5,10 +5,10 @@ import org.mockito.Mockito;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.Arrays;
 
-public class SiteTest {
+class SiteTest {
 
     @Test
-    public void testGettersAndSetters() {
+    void testGettersAndSetters() {
         // Create Sport objects
         Sport sport1 = new Sport();
         sport1.setSportId(1L);
@@ -41,14 +41,14 @@ public class SiteTest {
     }
 
     @Test
-    public void testNoArgsConstructor() {
+    void testNoArgsConstructor() {
         // Test no-args constructor
         Site site = new Site();
         assertNotNull(site);
     }
 
     @Test
-    public void testAllArgsConstructor() {
+    void testAllArgsConstructor() {
         // Create Sport objects
         Sport sport1 = new Sport(1L, "Basketball", new String[]{"olympic"}, null);
         Sport sport2 = new Sport(2L, "Swimming", new String[]{"olympic"}, null);
